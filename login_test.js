@@ -1,0 +1,54 @@
+Feature('login');
+
+Scenario('test something', (I) => {
+I.amOnPage('http://automationpractice.com/index.php');
+I.wait(5);
+I.see("WOMEN");
+I.click("//*[@id='block_top_menu']//a[contains(text(),'Women')]");
+I.fillField("//input[@id='search_query_top']","Faded short sleeve T shirts");
+I.click("//button[@name='submit_search']");
+I.wait(5);
+I.moveCursorTo("//div[@id='center_column']//ul//li//div//div//div//a//img");
+I.wait(10);
+I.click("//div[@id='center_column']//div[2]//div[2]//a[1]");
+I.wait(10);
+I.click("//div[@id='layer_cart']//div//div//div//a");
+I.wait(5);
+I.click('//*[@id="center_column"]/p[2]/a[1]');
+I.wait(5);
+I.fillField('//*[@id="email_create"]','shafil4@try.com');
+I.click('//*[@id="SubmitCreate"]');
+I.wait(10);
+I.checkOption('//*[@id="id_gender1"]');
+I.fillField('//*[@id="customer_firstname"]','Shafil');
+I.fillField('//*[@id="customer_lastname"]','G');
+I.fillField('//*[@id="passwd"]','shafil123');
+I.click('//*[@id="days"]');
+I.selectOption('//*[@id="days"]','2');
+I.selectOption('//*[@id="months"]','12');
+I.selectOption('//*[@id="years"]','2012');
+I.checkOption('//*[@id="newsletter"]');
+I.wait('5');
+I.fillField('//*[@id="firstname"]','shafil');
+I.fillField('//*[@id="lastname"]','G');
+I.fillField('//*[@id="address1"]','1-2-3 hsbd colony');
+I.fillField('//*[@id="city"]','Baton Rouge');
+I.click('//*[@id="id_state"]');
+I.selectOption('//*[@id="id_state"]','Louisiana');
+I.fillField('//*[@id="postcode"]','70801');
+I.fillField('//*[@id="phone_mobile"]','1234567898');
+I.fillField('//*[@id="alias"]','1-7-9 hbt colony');
+I.click('//*[@id="submitAccount"]');
+I.wait('5');
+I.click('//*[@id="center_column"]/form/p/button');
+I.checkOption('//*[@id="cgv"]');
+I.wait('5');
+I.click('//*[@id="form"]/p/button');
+I.wait('5');
+I.click('//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a');
+I.wait('5');
+I.click('//*[@id="cart_navigation"]/button');
+I.wait('15');
+});
+
+
